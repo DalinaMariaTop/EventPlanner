@@ -7,7 +7,7 @@ public abstract class Event {
     private final int id;
     private final String name;
     private final LocalDateTime dateAndTime;
-    protected String type;
+    protected EventType type;
 
     protected Event(int id, String name, LocalDateTime dateAndTime) {
         this.id = id;
@@ -27,7 +27,7 @@ public abstract class Event {
         return dateAndTime;
     }
 
-    public String getType() {
+    public EventType getType() {
         return type;
     }
     /**

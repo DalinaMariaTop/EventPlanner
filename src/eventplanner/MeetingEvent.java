@@ -9,8 +9,7 @@ public class MeetingEvent extends Event {
     public MeetingEvent(int id, String name, LocalDateTime dateAndTime, String location) {
         super(id, name, dateAndTime);
         this.location = location;
-        this.type = "MeetingEvent";
-        //type e string, enum eventType cu cele 3 valori cu/ fara proprietati
+        this.type = EventType.MEETING;
     }
 
     public String getLocation() {

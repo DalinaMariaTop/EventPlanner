@@ -51,7 +51,7 @@ public class EventPlanner {
                 date.getDayOfMonth() == dateAndTime.getDayOfMonth();
     }
 
-    public List<Event> findEventsByType(String type) {
+    public List<Event> findEventsByType(EventType type) {
         List<Event> filteredEvents = new ArrayList<>();
         for (Event event : events) {
             if (event.getType().equals(type)) {
@@ -62,18 +62,15 @@ public class EventPlanner {
         //in loc de String type vine enum-ul
     }
 
-    public void printEventDetails(String eventName) {
+    public void printEventDetails(String eventName) throws Exception {
         Event event = findEventByName(eventName);
-        if (event != null) {
-            System.out.println("Event ID: " + event.getId());
-            System.out.println("Event name: " + event.getName());
-            System.out.println("Date and time: " + event.getDateAndTime());
-            System.out.println("Details: " + event.getDetails());
-        } else {
-            System.out.println("Event '" + event.getName() + "with ID" + event.getId() + "' not found.");
+        if (event == null) {
+            throw new Exception("Event not found " + eventName);
         }
+        System.out.println("Event ID: " + event.getId());
+        System.out.println("Event name: " + event.getName());
+        System.out.println("Date and time: " + event.getDateAndTime());
+        System.out.println("Details: " + event.getDetails());
     }
-    //inversate - sa evit negatia; daca event e null, rezultatul de la else
-    //exceptie eventPlannerException cu mesaj - not found something..
 }
 

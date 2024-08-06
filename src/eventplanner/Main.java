@@ -10,50 +10,90 @@ public class Main {
         EventPlanner planner = new EventPlanner();
 
         planner.createBirthdayEvent(232, "John's birthday", LocalDateTime.parse("2024-08-01T14:03:00"), "John Thompson");
-        planner.printEventDetails("John's birthday");
+        try {
+            planner.printEventDetails("John's birthday");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
         planner.createPrivateEvent(233, "School: parent- teacher hour", LocalDateTime.parse("2024-08-02T14:03:00"), "Prepare for a child-evolution review.");
-        planner.printEventDetails("School: parent- teacher hour");
+        try {
+            planner.printEventDetails("School: parent- teacher hour");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
         planner.createMeetingEvent(234, "Office meeting", LocalDateTime.parse("2024-08-03T14:03:00"), "Timisoara Office");
-        planner.printEventDetails("Office meeting");
+        try {
+            planner.printEventDetails("Office meeting");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
 
         planner.createBirthdayEvent(232, "Anna's birthday", LocalDateTime.parse("2024-08-08T14:03:00"), "Anna Thompson");
-        planner.printEventDetails("Anna's birthday");
+        try {
+            planner.printEventDetails("Anna's birthday");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
         planner.createPrivateEvent(233, "University", LocalDateTime.parse("2024-08-09T14:03:00"), "Prepare for exam.");
-        planner.printEventDetails("University");
+        try {
+            planner.printEventDetails("University");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
         planner.createMeetingEvent(234, "Online meeting", LocalDateTime.parse("2024-08-10T14:03:00"), "Online");
-        planner.printEventDetails("Online meeting");
+        try {
+            planner.printEventDetails("Online meeting");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
         System.out.println("Printing all meeting events: ");
 
-        List<Event> meetingEvent = planner.findEventsByType("MeetingEvent");
-        for (Event e : meetingEvent) {
-            planner.printEventDetails(e.getName());
+        List<Event> meetingEvent = planner.findEventsByType(EventType.MEETING);
+        for (Event event : meetingEvent) {
+            try {
+                planner.printEventDetails(event.getName());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
 
         System.out.println("Printing all private events: ");
 
-        List<Event> privateEvent = planner.findEventsByType("PrivateEvent");
+        List<Event> privateEvent = planner.findEventsByType(EventType.PRIVATE);
         for (Event p : privateEvent) {
-            planner.printEventDetails(p.getName());
+            try {
+                planner.printEventDetails(p.getName());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
 
         System.out.println("Printing all birthday events: ");
 
-        List<Event> birthdayEvent = planner.findEventsByType("BirthdayEvent");
+        List<Event> birthdayEvent = planner.findEventsByType(EventType.BIRTHDAY);
         for (Event b : birthdayEvent) {
-            planner.printEventDetails(b.getName());
+            try {
+                planner.printEventDetails(b.getName());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
 
         System.out.println("Printing all events on the 1st of August");
 
         List<Event> eventsInAugust = planner.findEventByDate(LocalDate.parse("2024-08-01"));
         for (Event a : eventsInAugust) {
-            planner.printEventDetails(a.getName());
+            try {
+                planner.printEventDetails(a.getName());
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 }

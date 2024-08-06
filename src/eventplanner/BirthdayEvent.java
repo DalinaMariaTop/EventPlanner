@@ -9,7 +9,7 @@ public class BirthdayEvent extends Event {
     public BirthdayEvent(int id, String name, LocalDateTime dateAndTime, String birthdayPerson) {
         super(id, name, dateAndTime);
         this.birthdayPerson = birthdayPerson;
-        this.type = "BirthdayEvent";
+        this.type = EventType.BIRTHDAY;
     }
 
     public String getBirthdayPerson() {

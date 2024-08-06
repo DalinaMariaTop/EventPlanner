@@ -9,7 +9,7 @@ public class PrivateEvent extends Event {
     public PrivateEvent(int id, String name, LocalDateTime dateAndTime, String specialDescription) {
         super(id, name, dateAndTime);
         this.specialDescription = specialDescription;
-        this.type = "PrivateEvent";
+        this.type = EventType.PRIVATE;
     }
 
     public String getSpecialDescription() {
