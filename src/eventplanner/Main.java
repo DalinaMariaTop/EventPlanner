@@ -31,21 +31,21 @@ public class Main {
         }
 
 
-        planner.createBirthdayEvent(232, "Anna's birthday", LocalDateTime.parse("2024-08-08T14:03:00"), "Anna Thompson");
+        planner.createBirthdayEvent(235, "Anna's birthday", LocalDateTime.parse("2024-08-08T14:03:00"), "Anna Thompson");
         try {
             planner.printEventDetails("Anna's birthday");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
-        planner.createPrivateEvent(233, "University", LocalDateTime.parse("2024-08-09T14:03:00"), "Prepare for exam.");
+        planner.createPrivateEvent(236, "University", LocalDateTime.parse("2024-08-09T14:03:00"), "Prepare for exam.");
         try {
             planner.printEventDetails("University");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
 
-        planner.createMeetingEvent(234, "Online meeting", LocalDateTime.parse("2024-08-10T14:03:00"), "Online");
+        planner.createMeetingEvent(237, "Online meeting", LocalDateTime.parse("2024-08-10T14:03:00"), "Online");
         try {
             planner.printEventDetails("Online meeting");
         } catch (Exception e) {
