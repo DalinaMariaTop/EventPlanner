@@ -46,9 +46,10 @@ public class EventPlanner {
     }
 
     private boolean datesMatch(LocalDate date, LocalDateTime dateAndTime) {
-        return date.getYear() == dateAndTime.getYear() &&
-                date.getMonth() == dateAndTime.getMonth() &&
-                date.getDayOfMonth() == dateAndTime.getDayOfMonth();
+        return date.isEqual(dateAndTime.toLocalDate());
+//        return date.getYear() == dateAndTime.getYear() &&
+//                date.getMonth() == dateAndTime.getMonth() &&
+//                date.getDayOfMonth() == dateAndTime.getDayOfMonth();
     }
 
     public List<Event> findEventsByType(EventType type) {
@@ -59,7 +60,6 @@ public class EventPlanner {
             }
         }
         return filteredEvents;
-        //in loc de String type vine enum-ul
     }
 
     public void printEventDetails(String eventName) throws Exception {

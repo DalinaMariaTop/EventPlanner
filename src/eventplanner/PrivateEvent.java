@@ -18,7 +18,7 @@ public class PrivateEvent extends Event {
 
     @Override
     public String getDetails() {
-        return "Private event: " + getId() + " with name: " + getName() + "at: " + getDateAndTime().toString() +
+        return "Private event: " + getId() + " with name: " + getName() + "at: " + getDateAndTime() +
                 " with special description" + getSpecialDescription();
     }
 }

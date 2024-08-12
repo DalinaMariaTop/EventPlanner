@@ -30,6 +30,7 @@ public abstract class Event {
     public EventType getType() {
         return type;
     }
+
     /**
      * Abstract method for specific details
      */

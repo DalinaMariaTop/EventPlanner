@@ -18,6 +18,7 @@ public class BirthdayEvent extends Event {
 
     @Override
     public String getDetails() {
-        return getBirthdayPerson() + " celebrates his/her birthday on: " + getDateAndTime().getDayOfMonth() + "." + getDateAndTime().getMonth();
+        return getBirthdayPerson() + " celebrates his/her birthday on: " + getDateAndTime().getDayOfMonth() + "." +
+                getDateAndTime().getMonth();
     }
 }
