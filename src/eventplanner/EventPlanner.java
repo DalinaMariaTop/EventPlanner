@@ -47,9 +47,6 @@ public class EventPlanner {
 
     private boolean datesMatch(LocalDate date, LocalDateTime dateAndTime) {
         return date.isEqual(dateAndTime.toLocalDate());
-//        return date.getYear() == dateAndTime.getYear() &&
-//                date.getMonth() == dateAndTime.getMonth() &&
-//                date.getDayOfMonth() == dateAndTime.getDayOfMonth();
     }
 
     public List<Event> findEventsByType(EventType type) {
